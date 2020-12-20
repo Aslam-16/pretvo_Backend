@@ -7,8 +7,6 @@ Router.get("/listbuyers",function(req,res){
     status  : 0,
     message : 'Something went wrong in your code!'
   }
-    console.log("hiiiii");
-   // res.send("hiiiii");
      DB.GetDocument('buyers', {}, {}, {}, function(err, result) {
             if(err) {
                 res.send(response);
